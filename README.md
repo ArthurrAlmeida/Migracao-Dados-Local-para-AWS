@@ -1,6 +1,6 @@
-# Bootcamp Data Engineer
+# Migração de Banco de dados Local para Cloud
 
-<p> Este projeto foi uma participação no bootcamp para engenheiros de dados do professor Fernando Amaral e aqui irei compartilhar meus aprendizados, as formas estratégias usadas foram ELT incremental update. </p>
+<p> O projeto se inicia com a conexão do Banco de Dados da empresa em local host, depois da conexão é criado uma instancia EC2, instalado o Apache Airflow e o Postgres nessa instância, feito as conexões do Banco de Dados da empresa no EC2, feito conexão do Snowflake e e Postgres no Apache Airflow, criada a Dag usando python para fazer a carga no DW, depois que os dados estão presentes no Snowflake criamos a conexão entre ele e o dbt para transformar os dados dentro da Stage, subir para a dimensão e depois para a fato e depois criamos as regras de negocio para melhor visualização dos dados, isso tudo no dbt passando para o Snowflake. Depois de criados foi feito a conexão do DW com o Looker Studio para visualização dos dados. </p>
 
 <h2> Este projeto utilizou das seguintes ferramentas </h2>
 
@@ -25,10 +25,6 @@
 <h2> Desenho do projeto </h2>
 
 ![Modelagem do Projeto](https://github.com/user-attachments/assets/bf8ec021-2a3b-4ede-9986-a5b925fa1890)
-
-<h3> Explicação do projeto. </h3>
-<p> O projeto se inicia com a conexão do Banco de Dados da empresa em local host, depois da conexão é criado uma instancia EC2, instalado o Apache Airflow e o Postgres nessa instância, feito as conexões do Banco de Dados da empresa no EC2, feito conexão do Snowflake e e Postgres no Apache Airflow, criada a Dag usando python para fazer a carga no DW, depois que os dados estão presentes no Snowflake criamos a conexão entre ele e o dbt para transformar os dados dentro da Stage, subir para a dimensão e depois para a fato e depois criamos as regras de negocio para melhor visualização dos dados, isso tudo no dbt passando para o Snowflake. Depois de criados foi feito a conexão do DW com o Looker Studio para visualização dos dados. </p>
-
 
 <h2> Desenho do DW </h2>
 
